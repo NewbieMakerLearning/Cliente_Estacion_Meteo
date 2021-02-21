@@ -1,5 +1,8 @@
 /*Cliente estación metereológica con pantalla Nextion. Ver los datos de Thinger.io. 
  * Bot Telegram para la consulta de los datos.
+ * Palabras admitidas - /info Muestra información de las palabras admitidas
+ *                      Datos  Muestra la lectura de los sensores en formato texto
+ *                      Link Muestra un link hacia las gráficas de Grafana instalado en la pi.
 
   http://api.thinger.io/v1/users/EstacionMeteo/buckets/DATOS_ESTACION/data?items=1&max_ts=0&sort=desc&authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfRXN0YWNpb25fTWV0ZXJvIiwidXNyIjoiRXN0YWNpb25NZXRlbyJ9.OcmRskMMOiRn3ns4bEadEmNai-T60R_s2S6Jy4m2eBo
    ese link no debería caducar
@@ -20,7 +23,6 @@
 #include <ArduinoOTA.h> //Librería necesaria para el uso de OTA
 #include "ESP8266_Utils_OTA.hpp"  //Configuración para uso de OTA
 #include "CTBot.h"  //Librería para el bot de Telegram
-//#include <CREDENTIALS2.H> //Datos privados.
 #include "config.h" 
 
 /*///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -157,11 +159,8 @@ String varCaracterExtract (String varToExtract, String payload)
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 /*-----------Datos conexión Wifi-----------*/
-//const char* ssid = "RedWifi"; // Nuestro SSID (Nombre de la red)
-//const char* password = "KirguisT@N2035"; // Nuestra contraseña
 const char* host = "192.168.1.59";  // IP servidor
 const int   port = 80;            // Puerto servidor
-//const int   tiempo_Consulta = 60000;        // Tiempo hasta conexión Wifi.
 
 /*----------FUNCIÓN PARA LA CONEXIÓN A LA RED WIFI-----------*/
 void configWifi () 
@@ -212,7 +211,7 @@ unsigned long tiempoConsulta = 60000;
 
 /*---FUNCIÓN PARA EL ENVÍO DE LAS LECTURAS DE LOS SENSORES A LA BASE DE DATOS---*/
 void httprequest_DATA_BASE () 
-{ Serial.print ("30-");
+{ 
   /*------------LAS VARIABLES LOCALES------------*/
   tempint = bme.readTemperature();
   humeint = bme.readHumidity();
@@ -223,7 +222,6 @@ void httprequest_DATA_BASE ()
   if (!client.connect(host, port)) 
   {
     Serial.println("Fallo al conectar");
-    Serial.print ("31-");
     return;
   }
   /*---------------------------------Así se muestra en el navegador---------------------------------*/
@@ -263,7 +261,6 @@ void httprequest_DATA_BASE ()
   url += "&lumi=";
   url += lumi;
 
-  Serial.print ("32-");
   //============================== Enviamos petición al servidor
   client.print(String("GET ") + url + " HTTP/1.1\r\n" +
                "Host: " + host + "\r\n" +
@@ -273,7 +270,7 @@ void httprequest_DATA_BASE ()
     if (millis() - timeout > 5000) {
       Serial.println(">>> Client Timeout !");
       client.stop();
-      Serial.print ("33-");
+    
       return;
     }
   }
@@ -282,7 +279,7 @@ void httprequest_DATA_BASE ()
   while (client.available()) {
     String line = client.readStringUntil('\r');
     Serial.print(line);
-    Serial.print ("34-");
+   
   }
 }
 
@@ -297,12 +294,12 @@ void timer ()
   if (millis() < ultimaConsulta)  //Comprobar si se ha dado la vuelta
   {  
     ultimaConsulta = millis();  //Asignar un nuevo valor
-    Serial.print ("20-");
+    
   }
   if ((millis() - ultimaConsulta) > tiempoConsulta) 
   {
     ultimaConsulta = millis();  //Marca de tiempo
-    Serial.print ("21-");
+    
     /* -----------GUARDAMOS LAS LECTURAS DE LOS SENSORES DESDE THINGER.IO EN VARIABLES-----------*/
     lastBucketValue = httpRequest_THINGERio (link);
     tempout = varExtract ("Temperatura", lastBucketValue);
@@ -318,7 +315,7 @@ void timer ()
     punto_Cardinal = varCaracterExtract ("Cardinal", lastBucketValue);
     lLuvia1h = varExtract ("Lluvia1h", lastBucketValue);
     lLuvia24h = varExtract ("Lluvia24h", lastBucketValue);
-    Serial.print ("22-");
+    
     /*------Comentar una vez comprobado que interpreta bien los datos------*/
 
     /* Serial.print ("Temperatura exterior: ");
@@ -405,7 +402,7 @@ void timer ()
     /*leer_Sensores_Local (); //Mostramos la lectura de los sensores local por el puerto serie*/
 
     httprequest_DATA_BASE() ; //Enviamos los datos de los sensores mediante una dirección web qe guardará un php
-    Serial.print ("23-");
+    
   }
 }
 
@@ -448,7 +445,6 @@ void leer_Sensores_Local ()
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 CTBot myBot;
-//String token = "1471083690:AAGfIHGM-3hLUxr82BM-F8LSRdLHt5QR1Uk"; // Token bot Telegram
 
 void setup() 
 {
@@ -495,18 +491,14 @@ void loop()
   TBMessage msg;  //Variable para almacenar los mensajes de Telegram
    
   if (myBot.getNewMessage (msg))  //Si hay mensajes entrantes
-          Serial.print ("1-");
-  //String direccion_viento;
-    //  direccion_viento = dViento;
-  //String fuerza_viento;
-    //  fuerza_viento = fViento;
-   // String viento_Concatenado = "El viento es de: ";
-   // viento_Concatenado += "
-          
-String todo_Concatenado;
+                
+    
+    String link;
+    String info;
 
     if ((msg.text == "Datos"))
-    {Serial.print ("12-");
+    {
+      String todo_Concatenado;
       todo_Concatenado = "Las mediciones son las siguientes:  ";
       todo_Concatenado += "\r\n";
       todo_Concatenado += "\r\n";
@@ -581,6 +573,22 @@ String todo_Concatenado;
 
       myBot.sendMessage (msg.sender.id, todo_Concatenado);
     }
-   
+    if ((msg.text == "Link"))
+    {
+      link = "En el enlace de abajo podrás visualizar todos estos datos mediante gráficos";
+      link += "\r\n\r\n";
+      link += "http://meteoraspberry.ddns.net:3000/d/_fdibiWgk/estacion-meteorologica?orgId=1 ";  //Enlace gráficas grafana en la pi.
+      
+      myBot.sendMessage (msg.sender.id, link);
+    }
+    if ((msg.text == "/info"))
+    {
+      info = "Si escribes Datos, te mostraré la lectura de los sensores en formato texto.";
+      info += "\r\n";
+      info += "Si escribes Link, te mostraré un enlace para visualizar los datos con gráficas.";
+
+      myBot.sendMessage (msg.sender.id, info);
+    }
+     
   ArduinoOTA.handle();
 }
