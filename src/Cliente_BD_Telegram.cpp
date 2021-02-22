@@ -172,10 +172,6 @@ void configWifi ()
   WiFi.mode (WIFI_STA); //Configuración en modo cliente
   WiFi.begin (ssid, password); //Iniciamos la conexión WiFi
 
-  // IPAddress staticIP (192, 168, 1, 100); //Indicamos una IP fija
-  // IPAddress gateway (192, 168, 1, 1); //Puerta de enlace de nuestra conexión
-  // IPAddress subnet (255, 255, 255, 0); //Máscara de subred.
-
   //WiFi.config (staticIP, gateway, subnet);  //Configuramos la conexión
 
   while (WiFi.status() != WL_CONNECTED) { //Mientras no estemos conectados
@@ -581,14 +577,14 @@ void loop()
       
       myBot.sendMessage (msg.sender.id, link);
     }
-    if ((msg.text == "/info"))
+    /*if ((msg.text == "/info"))
     {
       info = "Si escribes Datos, te mostraré la lectura de los sensores en formato texto.";
       info += "\r\n";
       info += "Si escribes Link, te mostraré un enlace para visualizar los datos con gráficas.";
 
       myBot.sendMessage (msg.sender.id, info);
-    }
+    }*/
      
   ArduinoOTA.handle();
 }

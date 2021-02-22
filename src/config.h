@@ -1,6 +1,3 @@
-//const char* ssid     = "RedWifi";
-//const char* password = "KirguisT@N2035";
-
 #ifndef config.h
 
 #define config.h
