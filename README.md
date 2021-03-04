@@ -42,7 +42,7 @@
   **GRAFANA**
   
   Las opciones que tiene Grafana son abrumadoras. Como no soy ningún experto he pensado que es mejor que si tenéis dudas, busquéis por internet que hay verdaderos profesionales que lo explican perfectamente.
-  Durante este proyecto pensé en realizar una página web y alojarla en mi servidor para poder hacer consultas de las mediciones deseadas en un periodo de tiempo en concreto. Al ver webs de aficionados a la meteorología pensé que era una muy buena opción. Al descubrir Grafana y conseguir hacerlo funcionar he ahorrado mucho tiempo.
+  Durante este proyecto pensé en realizar una página web y alojarla en mi servidor para poder hacer consultas de las mediciones deseadas en un periodo de tiempo en concreto. Al ver webs de aficionados a la meteorología pensé que era una muy buena opción. Con Grafana conseguir esto es realmente rápido y sencillo.
   
   ![Alt text](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA1.JPG)
   
