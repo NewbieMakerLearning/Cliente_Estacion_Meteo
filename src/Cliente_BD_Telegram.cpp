@@ -397,7 +397,7 @@ void timer ()
     /*----------------------------FIN COMENTAR----------------------------*/
     /*leer_Sensores_Local (); //Mostramos la lectura de los sensores local por el puerto serie*/
 
-    httprequest_DATA_BASE() ; //Enviamos los datos de los sensores mediante una dirección web qe guardará un php
+    httprequest_DATA_BASE() ; //Enviamos los datos de los sensores mediante una dirección web que guardará un php
     
   }
 }
@@ -495,42 +495,38 @@ void loop()
     if ((msg.text == "Datos"))
     {
       String todo_Concatenado;
-      todo_Concatenado = "Las mediciones son las siguientes:  ";
-      todo_Concatenado += "\r\n";
-      todo_Concatenado += "\r\n";
-      todo_Concatenado += "Altura estación:  ";
+      todo_Concatenado += "Altura:  ";
       todo_Concatenado += "\t\t\t";
       todo_Concatenado += altitud;
       todo_Concatenado += "m";
       todo_Concatenado += "\r\n\r\n";
-      todo_Concatenado += "Dirección del viento:  ";
+      todo_Concatenado += "Dirección y velocidad viento:  ";
       todo_Concatenado += dViento;
       todo_Concatenado += " ";
       todo_Concatenado += punto_Cardinal;
-      todo_Concatenado += "\r\n";
-      todo_Concatenado += "Velocidad viento: ";
+      todo_Concatenado += "\t\t\t";
       todo_Concatenado += fViento;
       todo_Concatenado += "km/h";
       todo_Concatenado += "\r\n\r\n";
-      todo_Concatenado += "Temperatura exterior:  ";
+      todo_Concatenado += "T out:  ";
       todo_Concatenado += tempout;
       todo_Concatenado += "ºC";
       todo_Concatenado += "\r\n";
-      todo_Concatenado += "Humedad exterior:  ";
+      todo_Concatenado += "Hume out:  ";
       todo_Concatenado += "\t\t\t";
       todo_Concatenado += humeout;
       todo_Concatenado += "%";
       todo_Concatenado += "\r\n\r\n";
-      todo_Concatenado += "Temperatura interior:  ";
+      todo_Concatenado += "T int:  ";
       todo_Concatenado += tempint;
       todo_Concatenado += "ºC";
       todo_Concatenado += "\r\n";
-      todo_Concatenado += "Humedad interior:  ";
+      todo_Concatenado += "Hume int:  ";
       todo_Concatenado += "\t\t\t";
       todo_Concatenado += humeint;
       todo_Concatenado += "%";
       todo_Concatenado += "\r\n\r\n";
-      todo_Concatenado += "Punto de rocío:  ";
+      todo_Concatenado += "P. rocío:  ";
       todo_Concatenado += "\t\t\t";
       todo_Concatenado += p_Rocio;
       todo_Concatenado += "ºC";
@@ -540,30 +536,28 @@ void loop()
       todo_Concatenado += presion;
       todo_Concatenado += "hPa";
       todo_Concatenado += "\r\n";
-      todo_Concatenado +="Radiación: (DESACTIVADO)  ";
+      todo_Concatenado +="Radiación: ";
       todo_Concatenado += "\t\t\t";
       todo_Concatenado +=  uV;
       todo_Concatenado += "\r\n\r\n";
-      todo_Concatenado += "Precipitación última hora:  ";
+      todo_Concatenado += "Lluvia 1h:  ";
       todo_Concatenado += lLuvia1h;
-      todo_Concatenado += "mm^2";
+      todo_Concatenado += "mm";
       todo_Concatenado += "\r\n";
-      todo_Concatenado += "Precipitación en las últimas 24 horas:  ";
+      todo_Concatenado += "Lluvia 24h:  ";
       todo_Concatenado += lLuvia24h;
-      todo_Concatenado += "mm^2";
+      todo_Concatenado += "mm";
       todo_Concatenado += "\r\n\r\n";
       todo_Concatenado += "Luminosidad:  ";
       todo_Concatenado += "\t\t\t";
       todo_Concatenado += lumi;
       todo_Concatenado += "lux";
       todo_Concatenado += "\r\n\r\n";  
-      todo_Concatenado += "Señal Wifi exterior:  ";
-      todo_Concatenado += "\t\t\t";
+      todo_Concatenado += "Rssi: out  ";
       todo_Concatenado += rssiOUT;
       todo_Concatenado += "dBm";
-      todo_Concatenado += "\r\n";
-      todo_Concatenado += "Señal Wifi interior:  ";
-      todo_Concatenado += "\t\t\t";
+      todo_Concatenado += "\t";
+      todo_Concatenado += "int ";
       todo_Concatenado += rssiInt;
       todo_Concatenado += "dBm";
 
@@ -571,20 +565,10 @@ void loop()
     }
     if ((msg.text == "Link"))
     {
-      link = "En el enlace de abajo podrás visualizar todos estos datos mediante gráficos";
-      link += "\r\n\r\n";
-      link += "http://meteoraspberry.ddns.net:3000/d/_fdibiWgk/estacion-meteorologica?orgId=1 ";  //Enlace gráficas grafana en la pi.
+      link = "http://meteoraspberry.ddns.net:3000/d/_fdibiWgk/estacion-meteorologica?orgId=1 ";  //Enlace gráficas grafana en la pi.
       
       myBot.sendMessage (msg.sender.id, link);
     }
-    /*if ((msg.text == "/info"))
-    {
-      info = "Si escribes Datos, te mostraré la lectura de los sensores en formato texto.";
-      info += "\r\n";
-      info += "Si escribes Link, te mostraré un enlace para visualizar los datos con gráficas.";
-
-      myBot.sendMessage (msg.sender.id, info);
-    }*/
-     
+        
   ArduinoOTA.handle();
 }
