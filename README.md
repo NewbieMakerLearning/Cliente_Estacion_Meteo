@@ -38,6 +38,7 @@
   <p align="center">
  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_link%20(1).jpg" width="450">
   </p>
+  
   **GRAFANA**
   
   Las opciones que tiene Grafana son abrumadoras. Como no soy ningún experto he pensado que es mejor que si tenéis dudas, busquéis por internet que hay verdaderos profesionales que lo explican perfectamente.
@@ -54,6 +55,5 @@
  <br>
  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA3.JPG" width="650" title="hover text">
   </p>
- 
-  
+   
   __Histórico de la última semana__
