@@ -6,7 +6,7 @@
  El cliente tiene un sensor **BME280** que mide la temperatura y humedad interior. La calidad de la señal RSSI también la medimos para asegurarnos de la cobertura wifi.
  En principio había pensado usar una pantalla Nextion para poder visualizar todos los datos de los sensores, pero al ser bastante nuevo con Arduino he ido aprendiendo y viendo diferentes posibilidades. Así que esta primera versión carecerá de ella y será la versión 2 donde añadiré la pantalla.
  
- Esta versión es totalmente funcional. Una vez recoge los datos desde la API de [Thinger.io](https://www.thinger.io/) añade las lecturas locales y la envía a una base de datos creada en un NAS Synology mediante un archivo PHP.
+ Esta versión es totalmente funcional. Una vez recoge los datos desde la API de [Thinger.io](https://www.thinger.io/) añade las lecturas locales y la envía a una base de datos creada en un NAS Synology mediante un archivo PHP. Se pueden hacer peticiones con dos comandos al bot de Telegram.
  
  **API DE THINGER.IO**
  
