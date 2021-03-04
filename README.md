@@ -4,7 +4,7 @@
  La idea original era mucho más sencilla de lo que ha quedado finalmente. Al ir viendo posibilidades fui añadiendo utilidades, por ejemplo una base de datos para tener un histórico de consulta en las mediciones. Un bot de Telegram para darle inmediatez a la consulta. Un __dashboard__, a parte del de Thinger.io, con los datos locales y con una visualización más agradable con Grafana.
  
  El cliente tiene un sensor **BME280** que mide la temperatura y humedad interior. La calidad de la señal RSSI también la medimos para asegurarnos de la cobertura wifi.
- En principio había pensado usar una pantalla Nextion para poder visualizar todos los datos de los sensores, pero al ser bastante nuevo con Arduino he ido aprendiendo y viendo diferentes posibilidades. Así que esta primera versión carecerá de ella y será la versión 2 donde le añadiré la pantalla.
+ En principio había pensado usar una pantalla Nextion para poder visualizar todos los datos de los sensores, pero al ser bastante nuevo con Arduino he ido aprendiendo y viendo diferentes posibilidades. Así que esta primera versión carecerá de ella y será la versión 2 donde añadiré la pantalla.
  
  Esta versión es totalmente funcional. Una vez recoge los datos desde la API de [Thinger.io](https://www.thinger.io/) añade las lecturas locales y la envía a una base de datos creada en un NAS Synology mediante un archivo PHP.
  
