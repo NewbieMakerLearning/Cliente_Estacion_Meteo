@@ -30,9 +30,13 @@
  
  Como he escrito anteriormente, con el bot de Telegram podemos usar dos comandos.
   - Datos - muestra las últimas lecturas de los sensores.
-  ![alt text](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_Datos.jpg)
+
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_Datos.jpg" width="450" title="hover text">
+  
   - Link - envía un enlace hacia el __dashboard__ de Grafana.
-  ![alt text](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_link%20(1).jpg)
+  
+ <img src=" https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_link%20(1).jpg" width="450" title="hover text">
   
   **GRAFANA**
   
