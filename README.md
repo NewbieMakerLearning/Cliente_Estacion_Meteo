@@ -33,11 +33,11 @@
 
 <p align="center">
   <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_Datos.jpg" width="450" title="hover text">
-  
+  </p>
   - Link - envía un enlace hacia el __dashboard__ de Grafana.
-  
+  <p align="center">
  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_link%20(1).jpg" width="450">
-  
+  </p>
   **GRAFANA**
   
   Las opciones que tiene Grafana son abrumadoras. Como no soy ningún experto he pensado que es mejor que si tenéis dudas, busquéis por internet que hay verdaderos profesionales que lo explican perfectamente.
@@ -49,7 +49,11 @@
   
   Puedes ver las mediciones en periodos de tiempo como 5', 15', 30', 1h, 3h, 6h, 12h, 24h etc. Puedes mostrar la máxima, la mínima, un promedio y la actual, todo ello con unos simples clicks y sin nada de edición. Mientras que si hubiera realizado la página web, todo esto hubiera sido más laborioso, sobre todo, porque no tengo conocimientos suficientes para llevarlo a cabo.
   
-  ![Alt text](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA2.JPG)
-  ![Alt text](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA3.JPG)
+  <p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA2.JPG" width="450" title="hover text">
+ <br>
+ <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA3.JPG" width="450" title="hover text">
+  </p>
+ 
   
   __Histórico de la última semana__
