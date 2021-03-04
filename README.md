@@ -36,7 +36,7 @@
   
   - Link - envía un enlace hacia el __dashboard__ de Grafana.
   
- <img src=" https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_link%20(1).jpg" width="450" title="hover text">
+ <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_link%20(1).jpg" width="450">
   
   **GRAFANA**
   
