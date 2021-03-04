@@ -46,6 +46,8 @@
   
   ![Alt text](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA1.JPG)
   
+  <p align="center">
+ 
   __Las líneas rectas que hay en algunas gráficas se deben a un corte de luz__
   
   Puedes ver las mediciones en periodos de tiempo como 5', 15', 30', 1h, 3h, 6h, 12h, 24h etc. Puedes mostrar la máxima, la mínima, un promedio y la actual, todo ello con unos simples clicks y sin nada de edición. Mientras que si hubiera realizado la página web, todo esto hubiera sido más laborioso, sobre todo, porque no tengo conocimientos suficientes para llevarlo a cabo.
@@ -56,4 +58,6 @@
  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/dashboard_GRAFANA3.JPG" width="650" title="hover text">
   </p>
    
+   <p align="center">
+ 
   __Histórico de la última semana__
