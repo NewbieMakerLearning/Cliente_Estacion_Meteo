@@ -1,11 +1,8 @@
-/*Cliente estación metereológica con pantalla Nextion. Ver los datos de Thinger.io. 
+/*Cliente estación metereológica. 
  * Bot Telegram para la consulta de los datos.
- * Palabras admitidas - /info Muestra información de las palabras admitidas
- *                      Datos  Muestra la lectura de los sensores en formato texto
+ * Palabras admitidas - Datos  Muestra la lectura de los sensores en formato texto
  *                      Link Muestra un link hacia las gráficas de Grafana instalado en la pi.
 
-  http://api.thinger.io/v1/users/EstacionMeteo/buckets/DATOS_ESTACION/data?items=1&max_ts=0&sort=desc&authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfRXN0YWNpb25fTWV0ZXJvIiwidXNyIjoiRXN0YWNpb25NZXRlbyJ9.OcmRskMMOiRn3ns4bEadEmNai-T60R_s2S6Jy4m2eBo
-   ese link no debería caducar
  * */
 
 /*///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -50,9 +47,7 @@ int rssiInt;
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 //============================== Datos Thinger.io
-//#define USERNAME "EstacionMeteo"
-//#define DEVICE_ID "Servidor_Meteo"
-//#define DEVICE_CREDENTIAL "A+aKTL!K2!Dv"
+
 ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
 
 #define _DEBUG_
@@ -76,7 +71,7 @@ float lumi;
 float p_Rocio;
 
 /*---------IMPORTANTE no poner la "s" en "http" ------------------*/
-String link = "http://api.thinger.io/v1/users/EstacionMeteo/buckets/DATOS_ESTACION/data?items=1&max_ts=0&sort=desc&authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfRXN0YWNpb25fTWV0ZXJvIiwidXNyIjoiRXN0YWNpb25NZXRlbyJ9.OcmRskMMOiRn3ns4bEadEmNai-T60R_s2S6Jy4m2eBo";
+String link = "TU_LINK_DE_THINGER.IO";  //De donde sacaras en JSON
 
 /*-------------------FUNCIÓN PARA SACAR LAS VARIABLES DE THINGER.IO-------------------*/
 String httpRequest_THINGERio (String link) 
@@ -159,7 +154,7 @@ String varCaracterExtract (String varToExtract, String payload)
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 /*-----------Datos conexión Wifi-----------*/
-const char* host = "192.168.1.59";  // IP servidor
+const char* host = "TU_IP_SERVIDOR";  // IP servidor
 const int   port = 80;            // Puerto servidor
 
 /*----------FUNCIÓN PARA LA CONEXIÓN A LA RED WIFI-----------*/
@@ -221,7 +216,7 @@ void httprequest_DATA_BASE ()
     return;
   }
   /*---------------------------------Así se muestra en el navegador---------------------------------*/
-  /* //http://192.168.1.59/servidor_estacion/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160 */
+  /* //http://IP_SERVIDOR/servidor_estacion/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160 */
 
   String url = "/servidor_estacion/index.php?"; //Construimos la URL datos_Estacion/index.php?temp=[La tª del sensor]&hume=[la humedad del sensor]
   url += "&tempint=";
@@ -465,7 +460,6 @@ void setup()
   
   /*----------------------------------Bot Telegram----------------------------------*/
 
-
   Serial.println("Inicializando el bot de Telegram...");
   //myBot.wifiConnect(ssid, password);  //Conectamos el ESP8266 a la red wifi.
   myBot.setTelegramToken(token);  //Establecemos el token del bot de Telegram
@@ -488,7 +482,6 @@ void loop()
    
   if (myBot.getNewMessage (msg))  //Si hay mensajes entrantes
                 
-    
     String link;
     String info;
 
@@ -565,7 +558,7 @@ void loop()
     }
     if ((msg.text == "Link"))
     {
-      link = "http://meteoraspberry.ddns.net:3000/d/_fdibiWgk/estacion-meteorologica?orgId=1 ";  //Enlace gráficas grafana en la pi.
+      link = "poner tu propio enlace ";  //Enlace gráficas grafana en la pi.
       
       myBot.sendMessage (msg.sender.id, link);
     }

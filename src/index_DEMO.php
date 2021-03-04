@@ -19,10 +19,10 @@ $LluviaDia = $_GET['lLuvia24h'];
 $Luminosidad = $_GET['lumi'];
 
 echo "La temperatura interior es: ".$TemperaturaINT." <br> La humedad interior es: ".$HumedadINT." <br> La señal Wifi es: ".$RssiINT." <br> La temperatura exterior es: ".$TemperaturaOUT." <br> La humedad exterior es: ".$HumedadOUT." <br> El punto de rocío es: ".$PuntoRocio." <br> La señal Wifi exterior es: ".$RssiOUT." <br> La presión es: ".$Presion." <br> La altura aproximada es: ".$Altitud." <br> La dirección del viento es: ".$Dviento." <br> El punto cardinal es: ".$Cardinal." <br> La fuerza del viento es: ".$Fviento." <br> El índice UV es: ".$Uv." <br> La acumulación de agua en 1 hora es: ".$LluviaUnah." <br> La acumulación de agua en 24 horas es: ".$LluviaDia." <br> La luminosidad es: ".$Luminosidad;	//Mostramos los valores por pantalla.
-$usuario = "raul";	//usuario base de datos, MariaDB phpMyAdmin
-$contrasena = "*R@uL001492*";	//Constraseña MariaDB (phpMyAdmin)
-$servidor = "192.168.1.59:3307";	//Servidor Synology + puerto de MariaDB
-$basededatos = "estacion_meteo";	//Nombre base de datos
+$usuario = "USUARIO_BASE_dE_DATOS";	//usuario base de datos, MariaDB phpMyAdmin
+$contrasena = "TU_CONTRASENA";	//Constraseña MariaDB (phpMyAdmin)
+$servidor = "TU_IP_SERVIDOR:TU_PUERTO";	//Servidor Synology + puerto de MariaDB
+$basededatos = "TU_BASE_DE_DATOS";	//Nombre base de datos
 
 $conexion = mysqli_connect( $servidor, $usuario, $contrasena ) or die ("No se ha podido conectar al servidor de base de datos, posible error de usuario, contraseña o servidor");
 
