@@ -72,10 +72,12 @@ modificando nuestro SSID, el password y el token de nuestro bot, tendríamos un 
 
 Os pongo mi ejemplo.
 
-```myBot.sendMessage (msg.sender.id, todo_Concatenado);
+```
+myBot.sendMessage (msg.sender.id, todo_Concatenado);
 ```
 El bot envía la información solicitada mediante un String. En este caso tenemos float e int. Si pasaramos estas variables directamente:
-```myBot.sendMessage (msg.sender.id, [variable float o int]);
+```
+myBot.sendMessage (msg.sender.id, [variable float o int]);
 ```
 Nos daría error.
 Para solucionar esto hay que concatenarlas.
