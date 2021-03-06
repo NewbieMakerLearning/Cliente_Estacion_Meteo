@@ -60,5 +60,6 @@ Pulsando en _Edit Bot_ podemos editar el nombre, la descripción y los comandos 
 </p>
 <br>
 
-
+En la imagen podéis ver que tenía hasta 10 comandos.  Tuve que borrarlos casi todos porque tenía problemas de _panic kernel_ supongo que por trabajar con demasiadas
+String, no estoy seguro, si alguien lo lee y me puede hacer una crítica al respecto, le estaré agradecido. Dejé dos comandos que son **_Datos_** y **_Link_**
 
