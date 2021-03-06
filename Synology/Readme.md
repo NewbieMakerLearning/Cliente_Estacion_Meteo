@@ -20,7 +20,7 @@ En _MariaDB_ **habilitamos la conexión TCP/IP** y el puerto **3307** es por def
 En _Web station_ podemos ver todos los paquetes instalados. No todos los que veis aquí son necesarios.
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Web_Station_1.JPG" width="450" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Web_Station_1.JPG" width="550" title="hover text">
 </p>
 <br>
 
@@ -52,7 +52,7 @@ http://192.168.1.50/web/base_de_datos
 Le damos a ok.
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/host_Virtual_2.JPG" width="550" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/host_Virtual_2.JPG" width="450" title="hover text">
 </p>
 <br>
 
