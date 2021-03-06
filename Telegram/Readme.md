@@ -83,7 +83,7 @@ Nos daría error.
 Para solucionar esto hay que concatenarlas.
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/Telegram/codigo.png" width="450" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/Telegram/codigo.png" width="550" title="hover text">
 </p>
 <br>
 
