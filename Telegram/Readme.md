@@ -33,7 +33,8 @@ El nombre ha de terminar con la palabra bot.
 
 Y obtendremos este mensaje o parecido.
 
-```Done! Congratulations on your new bot. You will find it at t.me/NOMBRE_BOT. You can now add a description, 
+```
+Done! Congratulations on your new bot. You will find it at t.me/NOMBRE_BOT. You can now add a description, 
 about section and profile picture for your bot, see /help for a list of commands. By the way, when you've finished 
 creating your cool bot, ping our Bot Support if you want a better username for it. Just make sure the bot is fully 
 operational before you do this.
@@ -63,6 +64,19 @@ Pulsando en _Edit Bot_ podemos editar el nombre, la descripción y los comandos 
 </p>
 <br>
 
-En la imagen podéis ver que tenía hasta 10 comandos.  Tuve que borrarlos casi todos porque tenía problemas de _panic kernel_ supongo que por trabajar con demasiadas
+En la imagen podéis ver que tenía hasta 10 comandos.  Tuve que borrarlos casi todos porque tenía problemas de _panic core_ supongo que por trabajar con demasiadas
 String, no estoy seguro, si alguien lo lee y me puede hacer una crítica al respecto, le estaré agradecido. Dejé dos comandos que son **_Datos_** y **_Link_**
+
+Para programar el bot en nuestra tarjeta NodeMCU usé la librería [CTBOT-2.1.4](https://www.arduinolibraries.info/libraries/ct-bot) Con el ejemplo ```echoBot``` 
+modificando nuestro SSID, el password y el token de nuestro bot, tendríamos un sketch funcional.
+
+Os pongo mi ejemplo.
+
+```myBot.sendMessage (msg.sender.id, todo_Concatenado);
+```
+El bot envía la información solicitada mediante un String. En este caso tenemos float e int. Si pasaramos estas variables directamente:
+```myBot.sendMessage (msg.sender.id, [variable float o int]);
+```
+Nos daría error.
+Para solucionar esto hay que concatenarlas.
 
