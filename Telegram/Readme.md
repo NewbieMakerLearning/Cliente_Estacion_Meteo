@@ -80,3 +80,9 @@ El bot envía la información solicitada mediante un String. En este caso tenemo
 Nos daría error.
 Para solucionar esto hay que concatenarlas.
 
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/Telegram/codigo.png" width="450" title="hover text">
+</p>
+<br>
+
+El nombre de la variable puede ser mejor, jajaja.
