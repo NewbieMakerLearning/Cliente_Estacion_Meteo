@@ -27,7 +27,7 @@ En _Web station_ podemos ver todos los paquetes instalados. No todos los que vei
 Elejimos _Apache_ y la versión de _PHP_ que hayamos instalado. Habilitamos el sitio web personal. 
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Habilitar_Web_personal.JPG" width="450" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Habilitar_Web_personal.JPG" width="550" title="hover text">
 </p>
 
 <br>
@@ -35,7 +35,7 @@ Elejimos _Apache_ y la versión de _PHP_ que hayamos instalado. Habilitamos el s
 En la sección de _host virtual_ creamos uno nuevo y lo hacemos basado en el puerto, tanto **HTTP como HTTPS**. 
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/host_Virtual_1.JPG" width="450" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/host_Virtual_1.JPG" width="550" title="hover text">
 </p>
 <br>
 
@@ -52,7 +52,7 @@ http://192.168.1.50/web/base_de_datos
 Le damos a ok.
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/host_Virtual_2.JPG" width="350" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/host_Virtual_2.JPG" width="550" title="hover text">
 </p>
 <br>
 
