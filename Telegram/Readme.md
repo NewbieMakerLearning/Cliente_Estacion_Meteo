@@ -72,11 +72,19 @@ modificando nuestro SSID, el password y el token de nuestro bot, tendríamos un 
 
 Os pongo mi ejemplo.
 
-```myBot.sendMessage (msg.sender.id, todo_Concatenado);
+```
+myBot.sendMessage (msg.sender.id, todo_Concatenado);
 ```
 El bot envía la información solicitada mediante un String. En este caso tenemos float e int. Si pasaramos estas variables directamente:
-```myBot.sendMessage (msg.sender.id, [variable float o int]);
+```
+myBot.sendMessage (msg.sender.id, [variable float o int]);
 ```
 Nos daría error.
 Para solucionar esto hay que concatenarlas.
 
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/Telegram/codigo.png" width="550" title="hover text">
+</p>
+<br>
+
+El nombre de la variable puede ser mejor, jajaja.
