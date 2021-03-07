@@ -32,7 +32,7 @@
  **BOT DE TELEGRAM**
  
  Como he escrito anteriormente, con el bot de Telegram podemos usar dos comandos.
-  - Datos - muestra las últimas lecturas de los sensores.
+  - Datos - muestra las últimas lecturas de los sensores. (El sensor de radiación se rompió, la lectura es errónea.)
 
 <p align="center">
   <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/Telegram_Datos.jpg" width="450" title="hover text">
@@ -64,5 +64,5 @@
    
    <p align="center">
  
-  __Histórico de la última semana__
+  _Histórico de la última semana_
 
