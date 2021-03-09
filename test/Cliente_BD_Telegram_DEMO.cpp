@@ -216,7 +216,7 @@ void httprequest_DATA_BASE ()
     return;
   }
   /*---------------------------------Así se muestra en el navegador---------------------------------*/
-  /* //http://IP_SERVIDOR/servidor_estacion/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160 */
+  /* //http://IP_SERVIDOR/BASE_DE_DATOS/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160 */
 
   String url = "/servidor_estacion/index.php?"; //Construimos la URL datos_Estacion/index.php?temp=[La tª del sensor]&hume=[la humedad del sensor]
   url += "&tempint=";
