@@ -61,3 +61,37 @@ Le damos a ok.
 La web de [Naseros](http://www.naseros.com) es muy útil para configurar el NAS
 
 Con esto ya tendríamos nuestra servidor listo para crear la base de datos.
+
+Abrimos la consola de administración phpMyAdmin y le damos a **_Nueva_** para crear nuestra DB.
+
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/DB1.JPG" width="650" title="hover text">
+</p>
+<br>
+
+
+Le ponemos el nombre que usaremos después. Apuntarlo o recordar donde encontrarlo.
+
+Ahora creamos una tabla para poder mostrar esos datos. Importante elegir el número de columnas necesario para que quepan todas nuestras métricas.
+
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/DB2.JPG" width="650" title="hover text">
+</p>
+<br>
+imagen
+
+En la tabla que hemos creado tenemos que detallar el nombre, el tipo de variable a mostrar y yo he puesto en comentarios la unidad de medición del sensor.
+
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/DB3.JPG" width="650" title="hover text">
+</p>
+<br>
+
+Tras rellenar lo necesario nos debería quedar algo así.
+
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo/blob/master/pictures/DB4.JPG" width="650" title="hover text">
+</p>
+<br>
+
+
