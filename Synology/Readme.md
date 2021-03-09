@@ -94,4 +94,18 @@ Tras rellenar lo necesario nos debería quedar algo así.
 </p>
 <br>
 
+Es extremadamente importante que el tipo de variable coincida con la nuestra medición, si no sucede así, no conseguiremos registrar ningún dato en la DB.
 
+Con esto ya tendríamos nuestra tabla operativa.
+
+Si queréis hacer pruebas escribiendo en la base de datos manualmente podéis usar la dirección que está en el código arduino.
+
+http://192.168.1.59/servidor_estacion/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160
+
+En este ejemplo solo hay 6 variables para pasarlas a la base de datos. Según lo explicado anteriormente, respecto a las tablas, ¿Podríamos usarla así? 
+
+...
+
+...
+
+Pues dependerá del número de
