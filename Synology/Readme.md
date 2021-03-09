@@ -100,7 +100,7 @@ Con esto ya tendríamos nuestra tabla operativa.
 
 Si queréis hacer pruebas escribiendo en la base de datos manualmente podéis usar la dirección que está en el código arduino.
 
-http://192.168.1.59/servidor_estacion/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160
+http://IP_SERVIDOR/NUESTRA_DB/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160
 
 En este ejemplo solo hay 6 variables para pasarlas a la base de datos. Según lo explicado anteriormente, respecto a las tablas, ¿Podríamos usarla así? 
 
@@ -108,4 +108,10 @@ En este ejemplo solo hay 6 variables para pasarlas a la base de datos. Según lo
 
 ...
 
-Pues dependerá del número de
+Pues dependerá del número de columnas que tengamos en nuestra tabla y de las variables elegidas.
+
+Para usar este ejemplo podemos cambiar los números por los que queramos. La primera medición, tempint=7 podemos poner tempint=10...
+
+Ponemos esa dirección que acabamos de crear en el navegador usado, después de darle a intro volvemos a phpMyAdmin y en la tabla deberíamos ver nuestros datos. Este sistema me sirvió de mucha ayuda hasta que comprendí un poco la base de datos.
+
+Recordar tener el archivo .php en el lugar adecuado antes de intentar hacer funcionar este método.
