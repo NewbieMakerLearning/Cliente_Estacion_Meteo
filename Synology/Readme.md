@@ -47,7 +47,7 @@ http://192.168.1.50/web/base_de_datos
 
 **Servidor back-end HTTP** elegimos nuestro servidor instalado anteriormente, _Apache_.
 
-**En PHP**, elegimos nuestrop perfil de PHP, el mismo paquete que hemos instalado.
+**En PHP**, elegimos nuestro perfil de PHP, el mismo paquete que hemos instalado.
 
 Le damos a ok.
 
@@ -58,3 +58,6 @@ Le damos a ok.
 
 **Es importante darle permisos de escritura y lectura al usuario que accederá a la carpeta donde esté nuestro archivo _index.php_.**
 
+La web de [Naseros](http://www.naseros.com) es muy útil para configurar el NAS
+
+Con esto ya tendríamos nuestra servidor listo para crear la base de datos.
