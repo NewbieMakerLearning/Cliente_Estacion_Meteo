@@ -218,7 +218,7 @@ void httprequest_DATA_BASE ()
   /*---------------------------------Así se muestra en el navegador---------------------------------*/
   /* //http://IP_SERVIDOR/BASE_DE_DATOS/index.php?tempint=7&humeint=9&tempout=1&humeout=70&presion=1025.15&lumi=160 */
 
-  String url = "/servidor_estacion/index.php?"; //Construimos la URL datos_Estacion/index.php?temp=[La tª del sensor]&hume=[la humedad del sensor]
+  String url = "/BASE_DE_DATOS/index.php?"; //Construimos la URL datos_Estacion/index.php?temp=[La tª del sensor]&hume=[la humedad del sensor]
   url += "&tempint=";
   url += tempint; //mostrará la temperatura después de &tempint=
   url += "&humeint="; //añadimos lo que falta a la URl(ha de coincidir con las variables creadas en el archivo php)
