@@ -1,5 +1,14 @@
 # Cliente_Estacion_Meteo
- Cliente operativo 2021_02_19
+**IMPORTANTE**
+Para hacer funcionar el código hay que editar los siguientes archivos.
+
+Renombrar:
+
+ - Cliente_DB_Telegram_DEMO.cpp a **Cliente_DB_Telegram.cpp**
+ - config_DEMO.h a **config.h**
+ - index_DEMO.php a **index.php**
+ 
+Moverlos a la carpeta src
  
  La idea original era mucho más sencilla de lo que ha quedado finalmente. Al ir viendo posibilidades fui añadiendo utilidades, por ejemplo una base de datos para consulta del histórico de mediciones. Un bot de Telegram para darle inmediatez a la consulta. Un __dashboard__, a parte del de Thinger.io, con los datos locales y con una visualización más agradable realizado con Grafana.
  
