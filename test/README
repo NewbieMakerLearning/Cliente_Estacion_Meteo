@@ -1,14 +1,4 @@
-**IMPORTANTE**
-Para hacer funcionar el código hay que editar los siguientes archivos.
 
-Renombrar:
-
- - Cliente_DB_Telegram_DEMO.cpp a **Cliente_DB_Telegram.cpp**
- - config_DEMO.h a **config.h**
- - index_DEMO.php a **index.php**
- 
-Moverlos a la carpeta src
- 
 This directory is intended for PlatformIO Unit Testing and project tests.
 
 Unit Testing is a software testing method by which individual units of
